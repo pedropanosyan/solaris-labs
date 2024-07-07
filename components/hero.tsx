@@ -2,16 +2,18 @@
 import {Typewriter} from "react-simple-typewriter";
 import Lottie from "lottie-react";
 import rocket from '@/public/images/rocket.json';
+import ParticlesComponent from "@/components/particles";
 
 export default function Hero() {
 
     return (
         <section>
+            <ParticlesComponent/>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 relative h-screen flex flex-col justify-center">
-                <div className="absolute left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none" aria-hidden="true"
+               {/* <div className="absolute left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none" aria-hidden="true"
                      data-aos="fade-up" data-aos-delay="400">
                     {violetSvg}
-                </div>
+                </div>*/}
 
                 <div className="relative md:pt-20 md:pb-16 flex flex-col lg:flex-row justify-center items-center gap-4">
                     <div className="max-w-3xl flex flex-col justify-center w-3/5">
