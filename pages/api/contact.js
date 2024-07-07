@@ -12,7 +12,6 @@ export default async function sendEmail(req, res) {
 
     const user = process.env.NEXT_PUBLIC_EMAIL;
     const pass = process.env.NEXT_PUBLIC_PASSWORD;
-    console.log(user, pass)
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
