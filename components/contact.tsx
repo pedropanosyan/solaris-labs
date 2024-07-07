@@ -1,7 +1,7 @@
 "use client"
 import Email from '@/public/images/email.svg'
 import Image from "next/image";
-import {useState} from "react";
+import React, {useState} from "react";
 
 export default function Contact() {
 
@@ -11,21 +11,26 @@ export default function Contact() {
         message: ''
     })
 
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
         if (contactInfo.name === '' || contactInfo.email === '' || contactInfo.message === '') {
-            alert('Please fill out all fields')
-            return
+            alert('Please fill out all fields');
+            return;
         }
-        const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(contactInfo),
-        });
-        console.log(response.json())
-    }
+
+        try {
+            await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(contactInfo),
+            });
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
 
     return (
         <section id="contact">
