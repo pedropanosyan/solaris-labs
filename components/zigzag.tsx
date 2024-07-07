@@ -10,7 +10,7 @@ import Testing from '@/public/images/testing.svg'
 
 export default function Zigzag() {
     return (
-        <section id="services">
+        <section className="bg-gray-900" id="services">
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <div className="py-12 md:py-20">
 

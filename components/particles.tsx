@@ -28,14 +28,22 @@ const Particle = () => {
                     events: {
                         onHover: {
                             enable: true,
-                            mode: "repulse",
+                            mode: ["grab", "bubble"],
                         },
                         resize: true,
                     },
                     modes: {
-                        repulse: {
-                            distance: 100,
-                            duration: 1,
+                        grab: {
+                            distance: 150,
+                            links: {
+                                opacity: 1,
+                            },
+                        },
+                        bubble: {
+                            distance: 250,
+                            size: 2,
+                            duration: 2,
+                            opacity: 1,
                         },
                     },
                 },

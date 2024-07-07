@@ -16,8 +16,10 @@ export default function Home() {
             <Hero/>
             <Zigzag/>
             <Features/>
-            <Testimonials/>
-            <Contact/>
+            <div className={'bg-gray-900'}>
+                <Testimonials/>
+                <Contact/>
+            </div>
         </>
     )
 }
