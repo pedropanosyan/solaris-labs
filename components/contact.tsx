@@ -11,7 +11,7 @@ export default function Contact() {
         message: ''
     })
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
 
         if (contactInfo.name === '' || contactInfo.email === '' || contactInfo.message === '') {
@@ -80,7 +80,7 @@ export default function Contact() {
                                         placeholder="Message" aria-label="Your best email…"/>
 
                                     <button
-                                        onClick={handleSubmit}
+                                        onClick={(e) => handleSubmit(e)}
                                         className="btn text-purple-600 bg-purple-100 hover:bg-purple-300 hover:cursor shadow">
                                         Send
                                     </button>
@@ -89,8 +89,7 @@ export default function Contact() {
                             <div className="hidden lg:w-1/2 lg:block float-right">
                                 <Image className="object-contain w-80 ml-auto mt-20" alt={''} src={Email}/>
                             </div>
-                            {/* Success message */}
-                            {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
+
                         </form>
 
                     </div>
