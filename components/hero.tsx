@@ -19,7 +19,7 @@ export default function Hero() {
                     <div className="max-w-3xl flex flex-col justify-center w-3/5">
                         <h2 className="h1">
                             Empowering
-                            <span className="h1 text-purple-500">
+                            <span style={{color: '#5D5DFF'}} className="h1">
                                 <Typewriter
                                     words={[' Innovation.', ' Ideas.', ' Solutions.', ' Creativity.', ' Success.']}
                                     loop={true}
