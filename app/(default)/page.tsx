@@ -1,3 +1,5 @@
+import {ToastContainer} from "react-toastify";
+
 export const metadata = {
     title: 'Solaris',
     description: 'Solaris Software',
@@ -20,6 +22,7 @@ export default function Home() {
                 <Testimonials/>
                 <Contact/>
             </div>
+            <ToastContainer />
         </>
     )
 }

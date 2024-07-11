@@ -3,8 +3,12 @@ import {Typewriter} from "react-simple-typewriter";
 import Lottie from "lottie-react";
 import rocket from '@/public/images/rocket.json';
 import ParticlesComponent from "@/components/particles";
+import {useLanguage} from "@/context/LanguageContext";
 
 export default function Hero() {
+
+    const { content } = useLanguage();
+    const { hero } = content;
 
     return (
         <section>
@@ -15,13 +19,13 @@ export default function Hero() {
                     {violetSvg}
                 </div>*/}
 
-                <div className="relative md:pt-20 md:pb-16 flex flex-col lg:flex-row justify-center items-center gap-4">
+                <div className="relative md:pt-20 md:pb-16 flex flex-col lg:flex-row justify-between items-center gap-4">
                     <div className="max-w-3xl flex flex-col justify-center w-3/5">
                         <h2 className="h1">
-                            Empowering
+                            {hero.title}
                             <span style={{color: '#5D5DFF'}} className="h1">
                                 <Typewriter
-                                    words={[' Innovation.', ' Ideas.', ' Solutions.', ' Creativity.', ' Success.']}
+                                    words={hero.titleOptions}
                                     loop={true}
                                     cursor
                                     cursorStyle='  '
@@ -32,16 +36,16 @@ export default function Hero() {
                             </span>
                         </h2>
                         <p className="hidden md:block h3 md:text-gray-400 mt-5" data-aos="fade-up" data-aos-delay="200">
-                            Expertly crafting software solutions, bringing your ideas to life.
+                            {hero.subtitle}
                         </p>
                     </div>
 
-                    <div className="w-2/5 object-contain hidden lg:block">
+                    <div className="w-4/12 object-contain hidden lg:block">
                         <Lottie
                             animationData={rocket}
                             loop
                             autoplay
-                            style={{width: '80%', height: 'auto'}}
+                            style={{width: '100%', height: 'auto', marginLeft: 'auto'}}
                         />
                     </div>
                 </div>

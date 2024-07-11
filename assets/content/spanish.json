@@ -1,0 +1,127 @@
+{
+  "navbar": {
+    "sections": [
+      {
+        "name": "Servicios",
+        "link": "#servicios"
+      },
+      {
+        "name": "Experiencia",
+        "link": "#experiencia"
+      },
+      {
+        "name": "Nosotros",
+        "link": "#acerca"
+      }
+    ],
+    "contact": {
+      "name": "Contacto",
+      "link": "#contacto"
+    }
+  },
+  "hero": {
+    "title": "Empoderando",
+    "titleOptions": [
+      " Innovación.",
+      " Ideas.",
+      " Soluciones.",
+      " Creatividad.",
+      " Éxito."
+    ],
+    "subtitle": "Desarrollando expertamente soluciones de software, dando vida a tus ideas."
+  },
+  "services": {
+    "title": "Soluciones ilimitadas en varias áreas",
+    "subtitle": "En Solaris, ofrecemos una amplia gama de servicios y soluciones para todo tipo de proyectos. Nuestro equipo de profesionales te ayudará a encontrar la mejor solución para tus necesidades.",
+    "items": [
+      {
+        "title": "Desarrollo web",
+        "description": "Solaris trabaja para ofrecer soluciones que no solo cautiven a los usuarios, sino que también impulsen el compromiso y la satisfacción.",
+        "features": [
+          "Diseño de UI/UX",
+          "Optimización SEO",
+          "Servidores seguros"
+        ],
+        "order": 1
+      },
+      {
+        "title": "Desarrollo móvil",
+        "description": "Solaris ofrece una amplia gama de servicios de desarrollo móvil para ayudarte a crear aplicaciones atractivas y fáciles de usar.",
+        "features": [
+          "iOS/Android",
+          "Aplicaciones ligeras",
+          "Amigables con el usuario"
+        ],
+        "order": 2
+      },
+      {
+        "title": "Herramientas de automatización",
+        "description": "Solaris te ayuda a automatizar tareas repetitivas y optimizar tu flujo de trabajo para aumentar la productividad y reducir costos.",
+        "features": [
+          "Soluciones de integración",
+          "Optimización de flujos de trabajo",
+          "Automatización personalizada"
+        ],
+        "order": 3
+      }
+    ]
+  },
+  "expertise": {
+    "title": "Experiencia en diversas industrias",
+    "subtitle": "Solaris tiene experiencia en una amplia gama de industrias, desde la salud hasta las finanzas. Nuestro equipo de expertos te ayudará a encontrar la mejor solución para tus necesidades.",
+    "label": "Alcanza metas que importan",
+    "items": [
+      {
+        "title": "Colaboración cercana",
+        "description": "La colaboración es clave en nuestro proceso. Trabajamos estrechamente contigo para entender tus requisitos, ofrecer actualizaciones regulares e incorporar tus comentarios en cada paso."
+      },
+      {
+        "title": "Ejecución a gran velocidad",
+        "description": "Adoptamos metodologías ágiles para impulsar tus proyectos rápidamente, asegurando ciclos de desarrollo rápidos y respuesta a tus necesidades."
+      },
+      {
+        "title": "Proceso personalizado",
+        "description": "Desbloquea el potencial del desarrollo de software personalizado con nuestro equipo experto. Nos especializamos en crear soluciones innovadoras adaptadas para satisfacer tus necesidades únicas."
+      },
+      {
+        "title": "Tecnologías de vanguardia",
+        "description": "Nuestro equipo está dedicado a adaptarse continuamente en este mundo en constante evolución. Aprovechamos los últimos avances para transformar tu negocio."
+      },
+      {
+        "title": "Soluciones escalables",
+        "description": "Haz crecer tu negocio con facilidad utilizando nuestras soluciones escalables. Adapta y expande tu tecnología a medida que evoluciona tu negocio."
+      },
+      {
+        "title": "Aseguramiento de calidad",
+        "description": "La calidad está en el corazón de todo lo que hacemos. Nos aseguramos de que cada producto cumpla con los más altos estándares de rendimiento, confiabilidad y seguridad."
+      }
+    ]
+  },
+  "about": {
+    "title": "Conoce a nuestro equipo",
+    "subtitle": "Solaris está impulsado por un equipo de jóvenes talentos apasionados y dedicados",
+    "items": [
+      {
+        "description": "— Somos un equipo dinámico de jóvenes ingenieros impulsados por la curiosidad y la búsqueda constante del crecimiento. Intrépidos frente a los desafíos, nuestro compromiso con el aprendizaje continuo y la mejora nos mantiene en la vanguardia de la tecnología.",
+        "title": "Nuestra Filosofía"
+      },
+      {
+        "description": "— Como estudiantes universitarios dedicados a la ingeniería de software, contamos con una sólida formación técnica. Nuestro enfoque integra tecnologías de vanguardia y perspectivas frescas para ofrecer soluciones innovadoras.",
+        "title": "Formación técnica"
+      },
+      {
+        "description": "— Nuestra visión es revolucionar industrias a través de la innovación tecnológica. Nuestro objetivo es crear soluciones que empoderen negocios, mejoren las experiencias de los usuarios y generen un impacto positivo en la comunidad.",
+        "title": "Nuestro Propósito"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Empieza a trabajar con nosotros",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "button": "Enviar mensaje"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "navbar": {
+    "sections": [
+      {
+        "name": "Services",
+        "link": "#services"
+      },
+      {
+        "name": "Expertise",
+        "link": "#expertise"
+      },
+      {
+        "name": "About Us",
+        "link": "#about"
+      }
+    ],
+    "contact": {
+      "name": "Contact",
+      "link": "#contact"
+    }
+  },
+  "hero": {
+    "title": "Empowering",
+    "titleOptions": [
+      " Innovation.",
+      " Ideas.",
+      " Solutions.",
+      " Creativity.",
+      " Success."
+    ],
+    "subtitle": "Expertly crafting software solutions, bringing your ideas to life."
+  },
+  "services": {
+    "title": "Unlimited solutions in various areas",
+    "subtitle": "In Solaris, we offer a wide range of services and solutions for all types of projects. Our team of professionals will help you find the best solution for your needs.",
+    "items": [
+      {
+        "title": "Web development",
+        "description": "Solaris works to deliver solutions that not only captivate users but also drive engagement and satisfaction.",
+        "features": [
+          "UI/UX design",
+          "SEO optimization",
+          "Secure servers"
+        ],
+        "order": 1
+      },
+      {
+        "title": "Mobile development",
+        "description": "Solaris offers a wide range of mobile development services to help you create apps that are engaging and user-friendly.",
+        "features": [
+          "iOS/Android",
+          "Lightweight apps",
+          "User-friendly"
+        ],
+        "order": 2
+      },
+      {
+        "title": "Automation tools",
+        "description": "Solaris helps you automate repetitive tasks and streamline your workflow to increase productivity and reduce costs.",
+        "features": [
+          "Integration Solutions",
+          "Workflow optimization",
+          "Customized Automation"
+        ],
+        "order": 3
+      }
+    ]
+  },
+  "expertise": {
+    "title": "Expertise in various industries",
+    "subtitle": "Solaris has experience in a wide range of industries, from healthcare to finance. Our team of experts will help you find the best solution for your needs.",
+    "label": "Reach goals that matter",
+    "items": [
+      {
+        "title": "Close Collaboration",
+        "description": "Collaboration is key to our process. We work closely with you to understand your requirements, provide regular updates, and incorporate your feedback every step of the way."
+      },
+      {
+        "title": "Execute at lightning speed",
+        "description": "We embrace Agile methodologies to propel your projects forward at lightning speed, ensuring rapid development cycles and responsiveness to your needs."
+      },
+      {
+        "title": "Customized Process",
+        "description": "Unlock the potential of custom software development with our expert team. We specialize in crafting innovative solutions tailored to meet your unique needs."
+      },
+      {
+        "title": "Cutting-edge Technologies",
+        "description": "Our team is dedicated to continuously adapt in this rapidly evolving world. We leverage the latest advancements to transform your business."
+      },
+      {
+        "title": "Scalability Solutions",
+        "description": "Grow your business with ease using our scalable solutions. Adapt and expand your technology as your business evolves."
+      },
+      {
+        "title": "Quality Assurance",
+        "description": "Quality is at the heart of everything we do. We ensure that every product meets the highest standards of performance, reliability, and security."
+      }
+    ]
+  },
+  "about": {
+    "title": "Meet our crew",
+    "subtitle": "Solaris is driven by a team of passionate and dedicated young talents",
+    "items": [
+      {
+        "description": "— We're a dynamic team of young engineers driven by curiosity and a relentless pursuit of growth. Fearless in the face of challenges, our commitment to continuous learning and improvement keeps us on the cutting edge of technology",
+        "title": "Our Philosophy"
+      },
+      {
+        "description": "— As college students pursuing software engineering, we're equipped with a solid technical background. Our approach integrates cutting-edge technologies and fresh perspectives to deliver innovative solutions.",
+        "title": "Technical background"
+      },
+      {
+        "description": "— Our vision is to revolutionize industries through technological innovation. We aim to create solutions that empower businesses, enhance user experiences, and drive positive societal impact on the community.",
+        "title": "What we see"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Start working with us",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "button": "Send message"
+    }
+  }
+}

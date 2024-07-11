@@ -2,38 +2,88 @@
 import Email from '@/public/images/email.svg'
 import Image from "next/image";
 import React, {useState} from "react";
+import 'react-toastify/dist/ReactToastify.css';
+import {toast} from "react-toastify";
+import {useLanguage} from "@/context/LanguageContext";
 
 export default function Contact() {
-
+    const { content } = useLanguage();
+    const { contact } = content;
+    const [loading, setLoading] = useState(false);
     const [contactInfo, setContactInfo] = useState({
         name: '',
         email: '',
         message: ''
     })
 
+    const validateInputs = () => {
+        if (contactInfo.name === '' || contactInfo.email === '' || contactInfo.message === '') {
+            toast('Please fill in all fields.', {
+                type: 'error',
+                position: 'top-right',
+                autoClose: 3000,
+                theme: 'dark'
+            });
+            return false;
+        }
+        return true;
+    }
+
     const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
-
-        if (contactInfo.name === '' || contactInfo.email === '' || contactInfo.message === '') {
-            alert('Please fill out all fields');
-            return;
-        }
+        if (loading) return;
+        if (!validateInputs()) return;
 
         try {
-            await fetch('/api/contact', {
+            toast('Sending message...', {
+                type: 'info',
+                position: 'top-right',
+                autoClose: 3000,
+                theme: 'dark'
+            })
+            setLoading(true);
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(contactInfo),
             });
-        } catch (error) {
-            console.error('Error:', error);
+
+            if (!response.ok) {
+                toast('An error occurred. Please try again later.', {
+                    type: 'error',
+                    position: 'top-right',
+                    autoClose: 3000,
+                    theme: 'dark'
+                });
+            } else {
+                setContactInfo({
+                    name: '',
+                    email: '',
+                    message: ''
+                });
+                toast('Message sent!', {
+                    type: 'success',
+                    position: 'top-right',
+                    autoClose: 3000,
+                    theme: 'dark'
+                });
+            }
+        } catch (error: any) {
+            toast(`An error occurred: ${error.message}`, {
+                type: 'error',
+                position: 'top-right',
+                autoClose: 3000,
+                theme: 'dark'
+            });
+        } finally {
+            setLoading(false);
         }
     };
 
     return (
-        <section id="contact">
+        <section id={content.navbar.contact.link.slice(1)}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
                 {/* CTA box */}
@@ -61,28 +111,31 @@ export default function Contact() {
                         <form className="w-full flex items-center">
                             <div className="flex-1">
                                 <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left">
-                                    <h3 className="h3 text-white mb-2">Start working with us</h3>
+                                    <h3 className="h3 text-white mb-2">{contact.title}</h3>
                                 </div>
                                 <div
                                     className="flex flex-col gap-2 w-100 justify-center">
                                     <input onChange={(e) => setContactInfo({...contactInfo, name: e.target.value})}
                                            type="text"
+                                           value={contactInfo.name}
                                            className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400"
-                                           placeholder="Full name" aria-label="Your best email…"/>
+                                           placeholder={contact.form.name} aria-label="Your best email…"/>
                                     <input onChange={(e) => setContactInfo({...contactInfo, email: e.target.value})}
                                            type="email"
+                                           value={contactInfo.email}
                                            className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400"
-                                           placeholder="Email" aria-label="Your best email…"/>
+                                           placeholder={contact.form.email} aria-label="Your best email…"/>
                                     <textarea
                                         onChange={(e) => setContactInfo({...contactInfo, message: e.target.value})}
                                         rows={4}
+                                        value={contactInfo.message}
                                         className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400"
-                                        placeholder="Message" aria-label="Your best email…"/>
+                                        placeholder={contact.form.message} aria-label="Your best email…"/>
 
                                     <button
                                         onClick={(e) => handleSubmit(e)}
                                         className="btn text-purple-600 bg-purple-100 hover:bg-purple-300 hover:cursor shadow">
-                                        Send
+                                        {contact.form.button}
                                     </button>
                                 </div>
                             </div>
