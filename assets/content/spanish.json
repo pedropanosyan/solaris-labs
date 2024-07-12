@@ -52,7 +52,7 @@
           "Aplicaciones ligeras",
           "Amigables con el usuario"
         ],
-        "order": 2
+        "order": 0
       },
       {
         "title": "Herramientas de automatización",
@@ -62,7 +62,7 @@
           "Optimización de flujos de trabajo",
           "Automatización personalizada"
         ],
-        "order": 3
+        "order": 1
       }
     ]
   },

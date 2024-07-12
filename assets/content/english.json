@@ -52,7 +52,7 @@
           "Lightweight apps",
           "User-friendly"
         ],
-        "order": 2
+        "order": 0
       },
       {
         "title": "Automation tools",
@@ -62,7 +62,7 @@
           "Workflow optimization",
           "Customized Automation"
         ],
-        "order": 3
+        "order": 1
       }
     ]
   },

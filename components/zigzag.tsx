@@ -32,8 +32,8 @@ export default function Zigzag() {
                             <div key={index} className="md:grid md:grid-cols-12 md:gap-6 items-center">
                                 {/* Image */}
                                 <div
-                                    className={`max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 ${
-                                        service.order === 1 ? 'md:order-1' : 'rtl'
+                                    className={`max-w-xl md:max-w-2/5 md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 ${
+                                        service.order === 1 ? 'md:order-1' : 'rtl pr-12'
                                     }`}
                                     data-aos="fade-up"
                                 >
@@ -41,12 +41,13 @@ export default function Zigzag() {
                                 </div>
                                 {/* Content */}
                                 <div
-                                    className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6"
-                                    data-aos={service.order === 1 ? 'fade-right' : 'fade-left'}
+                                    className={`max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 
+                                    ${service.order === 0 && 'pl-10'}`}
+                                    data-aos={service.order === 1 ? 'fade-right' : 'fade-left pl-18'}
                                 >
                                     <div className={`md:${service.order === 1 ? 'pr' : 'pl'}-4 lg:${service.order === 1 ? 'pr' : 'pl'}-12 xl:${service.order === 1 ? 'pr' : 'pl'}-16`}>
                                         <div className="font-architects-daughter text-xl text-purple-600 mb-2">
-                                            {service.title === 'Web development' ? 'Captivate your clients' : service.title === 'Mobile development' ? 'Expand your scope' : 'Automate repetitive tasks'}
+                                            {service.title}
                                         </div>
                                         <h3 className="h3 mb-3">{service.title}</h3>
                                         <p className="text-xl text-gray-400 mb-4">{service.description}</p>
