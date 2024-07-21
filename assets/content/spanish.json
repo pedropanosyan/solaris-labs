@@ -6,12 +6,12 @@
         "link": "#servicios"
       },
       {
-        "name": "Experiencia",
-        "link": "#experiencia"
+        "name": "Workflow",
+        "link": "#workflow"
       },
       {
-        "name": "Nosotros",
-        "link": "#acerca"
+        "name": "Equipo",
+        "link": "#equipo"
       }
     ],
     "contact": {
@@ -20,19 +20,19 @@
     }
   },
   "hero": {
-    "title": "Empoderando",
+    "title": "Impulsando",
     "titleOptions": [
       " Innovación.",
       " Ideas.",
       " Soluciones.",
-      " Creatividad.",
+      " Proyectos.",
       " Éxito."
     ],
-    "subtitle": "Desarrollando expertamente soluciones de software, dando vida a tus ideas."
+    "subtitle": "Desarrollando soluciones de software para impulsar tu negocio y alcanzar tus metas."
   },
   "services": {
-    "title": "Soluciones ilimitadas en varias áreas",
-    "subtitle": "En Solaris, ofrecemos una amplia gama de servicios y soluciones para todo tipo de proyectos. Nuestro equipo de profesionales te ayudará a encontrar la mejor solución para tus necesidades.",
+    "title": "Servicios de software a tu medida",
+    "subtitle": "En Solaris, ofrecemos una amplia gama de servicios para todo tipo de proyectos. Nuestro equipo de profesionales te ayudará a encontrar la mejor solución para tus necesidades.",
     "items": [
       {
         "title": "Desarrollo web",
