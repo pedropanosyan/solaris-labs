@@ -35,7 +35,7 @@ export default function Features() {
                                  data-aos-delay={index * 100} data-aos-anchor="[data-aos-id-blocks]">
                                 <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                                     {/* SVG content for each item */}
-                                    {renderSvg(item.title)}
+                                    {renderSvg(index)}
                                 </svg>
                                 <h4 className="h4 mb-2">{item.title}</h4>
                                 <p className="text-lg text-gray-400 text-center">{item.description}</p>
@@ -49,11 +49,10 @@ export default function Features() {
     )
 }
 
+function renderSvg(index: number) {
 
-function renderSvg(title: string) {
-
-    switch (title) {
-        case "Close Collaboration":
+    switch (index) {
+        case 0:
             return (
                 <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                     <rect className="fill-current text-purple-600" width="64" height="64" rx="32"/>
@@ -64,7 +63,7 @@ function renderSvg(title: string) {
                           strokeLinecap="square" strokeWidth="2"/>
                 </svg>
             );
-        case "Execute at lightning speed":
+        case 1:
             return (
                 <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                     <circle className="fill-current text-purple-600" cx="32" cy="32" r="32"/>
@@ -74,7 +73,7 @@ function renderSvg(title: string) {
                           strokeWidth="2" strokeLinecap="square"/>
                 </svg>
             );
-        case "Customized Process":
+        case 2:
             return (
                 <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                     <rect className="fill-current text-purple-600" width="64" height="64" rx="32"/>
@@ -87,7 +86,7 @@ function renderSvg(title: string) {
                     </g>
                 </svg>
             );
-        case "Cutting-edge Technologies":
+        case 3:
             return (
                 <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                     <rect className="fill-current text-purple-600" width="64" height="64" rx="32"/>
@@ -99,7 +98,7 @@ function renderSvg(title: string) {
                     </g>
                 </svg>
             )
-        case "Scalability Solutions":
+        case 4:
             return (
                 <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                     <rect className="fill-current text-purple-600" width="64" height="64" rx="32"/>
@@ -110,7 +109,7 @@ function renderSvg(title: string) {
                     </g>
                 </svg>
             )
-        case "Quality Assurance":
+        case 5:
             return (
                 <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                     <rect className="fill-current text-purple-600" width="64" height="64" rx="32"/>
